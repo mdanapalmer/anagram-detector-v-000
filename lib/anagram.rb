@@ -1,15 +1,16 @@
-# Your code goes here!
+require 'pry'
 class Anagram
-  attr_accessor :word
+  attr_reader :word 
+  
+  #why reader?  now we have a method .name????
   
   def initialize(word)
     @word = word
   end
   
   def match(array)
-    array.select {|x| x.split("").sort == @word.split("").sort}
-  end
-end
-
+    array.keep_if { |string| word.split('').sort == string.split('').sort }
     
+end
   
+end
