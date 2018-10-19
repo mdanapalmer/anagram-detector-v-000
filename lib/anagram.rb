@@ -2,8 +2,6 @@ require 'pry'
 class Anagram
   attr_reader :word 
   
-  #why reader?  now we have a method .name????
-  
   def initialize(word)
     @word = word
   end
